@@ -104,6 +104,18 @@
       background-size: 1rem 1rem;
       background-position: center;
     }
+
+    /* Responsive carousel for mobile devices */
+    @media (max-width: 768px) {
+      .carousel-control-prev,
+      .carousel-control-next {
+        margin-top: 50px;
+      }
+
+      .service-card {
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -182,10 +194,10 @@
 
       <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <!-- Slide 1 -->
+          <!-- Slide 1: Scaling -->
           <div class="carousel-item active">
             <div class="row g-4 justify-content-center">
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-tooth fa-3x mb-3" style="color: var(--dental-blue);"></i>
@@ -194,8 +206,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-4">
+          <!-- Slide 2: Periodontics -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-heart-pulse fa-3x mb-3" style="color: var(--dental-blue);"></i>
@@ -204,8 +221,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-4">
+          <!-- Slide 3: Fillings -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-fill-drip fa-3x mb-3" style="color: var(--dental-blue);"></i>
@@ -217,10 +239,10 @@
             </div>
           </div>
 
-          <!-- Slide 2 -->
+          <!-- Slide 4: Whitening -->
           <div class="carousel-item">
             <div class="row g-4 justify-content-center">
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-sparkles fa-3x mb-3" style="color: var(--dental-blue);"></i>
@@ -229,8 +251,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-4">
+          <!-- Slide 5: Endodontics -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-tooth fa-3x mb-3" style="color: var(--dental-blue);"></i>
@@ -239,8 +266,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="col-md-4">
+          <!-- Slide 6: Restorative -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-crown fa-3x mb-3" style="color: var(--dental-blue);"></i>
@@ -252,24 +284,15 @@
             </div>
           </div>
 
-          <!-- Slide 3 -->
+          <!-- Slide 7: Minor Surgery -->
           <div class="carousel-item">
             <div class="row g-4 justify-content-center">
-              <div class="col-md-4 offset-md-0">
+              <div class="col-12 col-md-4">
                 <div class="card service-card h-100 text-center p-4">
                   <div class="card-body">
                     <i class="fas fa-user-injured fa-3x mb-3" style="color: var(--dental-blue);"></i>
                     <h5 class="card-title">Tiểu phẫu (Minor Surgery)</h5>
                     <p class="card-text">Extractions, wisdom tooth surgery and small oral surgical procedures.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card service-card h-100 text-center p-4 border-0 bg-transparent">
-                  <div class="card-body">
-                    <h5 class="card-title">&nbsp;</h5>
-                    <p class="card-text">&nbsp;</p>
                   </div>
                 </div>
               </div>
