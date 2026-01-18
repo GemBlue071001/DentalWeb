@@ -79,6 +79,29 @@
       color: var(--dental-green);
       margin-right: 10px;
     }
+
+    /* Make carousel Prev/Next controls solid black and circular for better visibility */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #000;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+    }
+
+    /* Keep the chevron icon centered and sized nicely */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 1rem;
+      height: 1rem;
+      background-size: 1rem 1rem;
+      background-position: center;
+    }
   </style>
 </head>
 
@@ -144,42 +167,127 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services Section: carousel showing pricing categories -->
   <section id="services" class="py-5">
     <div class="container">
-      <div class="text-center mb-5">
+      <div class="text-center mb-4">
         <h2 class="display-5 fw-bold">Our Services</h2>
-        <p class="lead">Comprehensive dental care for the whole family</p>
+        <p class="lead">Browse our main service categories — swipe or use the controls to see more.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card service-card h-100 text-center p-4">
-            <div class="card-body">
-              <i class="fas fa-teeth-open fa-3x mb-3" style="color: var(--dental-blue);"></i>
-              <h5 class="card-title">General Dentistry</h5>
-              <p class="card-text">Regular cleanings, fillings, and preventive care to keep your teeth healthy.</p>
+
+      <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-tooth fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Cạo vôi răng (Scaling)</h5>
+                    <p class="card-text">Professional scaling and polishing to remove plaque and tartar.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-heart-pulse fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Nha chu (Periodontics)</h5>
+                    <p class="card-text">Treatment for gum disease, abscess drainage and periodontal care.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-fill-drip fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Trám răng (Fillings)</h5>
+                    <p class="card-text">Composite and GIC fillings for cavities and pediatric restorations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-sparkles fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Tẩy trắng răng (Whitening)</h5>
+                    <p class="card-text">In-clinic and take-home whitening options for a brighter smile.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-tooth fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Nội nha (Endodontics)</h5>
+                    <p class="card-text">Root canal treatments and post placement for infected teeth.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-crown fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Phục hình (Restorative)</h5>
+                    <p class="card-text">Crowns, dentures and restorative solutions to rebuild form and function.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4 offset-md-0">
+                <div class="card service-card h-100 text-center p-4">
+                  <div class="card-body">
+                    <i class="fas fa-user-injured fa-3x mb-3" style="color: var(--dental-blue);"></i>
+                    <h5 class="card-title">Tiểu phẫu (Minor Surgery)</h5>
+                    <p class="card-text">Extractions, wisdom tooth surgery and small oral surgical procedures.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 d-none d-md-block">
+                <div class="card service-card h-100 text-center p-4 border-0 bg-transparent">
+                  <div class="card-body">
+                    <h5 class="card-title">&nbsp;</h5>
+                    <p class="card-text">&nbsp;</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card service-card h-100 text-center p-4">
-            <div class="card-body">
-              <i class="fas fa-smile-beam fa-3x mb-3" style="color: var(--dental-blue);"></i>
-              <h5 class="card-title">Cosmetic Dentistry</h5>
-              <p class="card-text">Teeth whitening, veneers, and smile makeovers to enhance your appearance.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card service-card h-100 text-center p-4">
-            <div class="card-body">
-              <i class="fas fa-tooth fa-3x mb-3" style="color: var(--dental-blue);"></i>
-              <h5 class="card-title">Dental Implants</h5>
-              <p class="card-text">Permanent tooth replacement solutions that look and feel natural.</p>
-            </div>
-          </div>
-        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
       </div>
+
+      <div class="text-center mt-4">
+        <a href="price.html" class="btn btn-dental btn-lg">See full price list</a>
+      </div>
+
     </div>
   </section>
 
