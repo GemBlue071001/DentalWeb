@@ -105,8 +105,25 @@
       background-position: center;
     }
 
+    /* Responsive carousel for tablet devices (768px to 991px) */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .carousel-item .col-md-4 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        margin-top: 50px;
+      }
+
+      .service-card {
+        margin-bottom: 20px;
+      }
+    }
+
     /* Responsive carousel for mobile devices */
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .carousel-control-prev,
       .carousel-control-next {
         margin-top: 50px;
